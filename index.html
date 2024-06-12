@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unsubscribe Example</title>
+</head>
+<body>
+    <button id="unsubscribeButton" style="display: none;" onclick="alert('You have unsubscribed!')">Unsubscribe</button>
+    <a href="#" id="unsubscribeLink">Click here to unsubscribe</a>
+    <script>
+        // Function to click the unsubscribe button
+        function clickUnsubscribeButton() {
+            document.getElementById('unsubscribeButton').click();
+        }
+
+        // Add an event listener to the link to call the function
+        document.getElementById('unsubscribeLink').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default link behavior
+            clickUnsubscribeButton(); // Call the function to click the button
+        });
+
+        // Automatically click the button when the page loads (optional)
+        // window.onload = clickUnsubscribeButton;
+    </script>
+</body>
+</html>
